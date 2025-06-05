@@ -7,15 +7,13 @@
 
 :root {
     --primary: #1a1a1a;
-    --secondary: #2c5e92;
-    --accent: #4a6fa5;
+    --secondary: #de7e4d;
+    --accent: #de7e4d;
     --light: #f8f9fa;
     --dark: #121212;
     --transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* <weight>: Use a value from 100 to 900 */
-/* <uniquifier>: Use a unique and descriptive class name */
 .abhaya-libre-regular {
     font-family: "Abhaya Libre", serif;
     font-weight: 400;
@@ -1010,13 +1008,13 @@ footer {
     animation: fadeIn 1.8s ease-out forwards;
     opacity: 0;
     animation-delay: 1.4s;
-    background: rgba(0,0,0,0.02);
+    /* background: rgba(0,0,0,0.02); */
     margin-top: 4rem;
 }
 
 body.dark-mode footer {
     color: #aaa;
-    background: rgba(255,255,255,0.02);
+    /* background: rgba(255,255,255,0.02); */
 }
 
 .footer-content {
@@ -1035,6 +1033,7 @@ body.dark-mode footer {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    text-decoration: none;
     background: rgba(44, 94, 146, 0.1);
     display: flex;
     align-items: center;
