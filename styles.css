@@ -16,6 +16,45 @@
 
 /* <weight>: Use a value from 100 to 900 */
 /* <uniquifier>: Use a unique and descriptive class name */
+
+
+.noto-sans-sinhala-regular {
+    font-family: "Noto Sans Sinhala", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+.noto-sans-sinhala-medium {
+    font-family: "Noto Sans Sinhala", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+.noto-sans-sinhala-semibold {
+    font-family: "Noto Sans Sinhala", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+.noto-sans-sinhala-bold {
+    font-family: "Noto Sans Sinhala", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+.noto-sans-sinhala-extrabold {
+    font-family: "Noto Sans Sinhala", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+
+
 .abhaya-libre-regular {
     font-family: "Abhaya Libre", serif;
     font-weight: 400;
@@ -141,6 +180,16 @@ body.dark-mode header {
     font-size: 1.5rem;
     box-shadow: 0 5px 15px rgba(44, 94, 146, 0.3);
     transition: var(--transition);
+}
+
+body.dark-mode .svgc{
+    filter: brightness(0) invert(1); /* Turns any color to white */
+    display: block;
+}
+
+.svgc {
+    filter: brightness(0); /* Turns any color to white */
+    display: block;
 }
 
 .logo:hover .logo-icon {
@@ -332,7 +381,7 @@ body.dark-mode header {
 }
 
 .hero-subtitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: #555;
     margin-bottom: 3rem;
@@ -562,6 +611,7 @@ body.dark-mode .phone-number:hover {
 }
 
 .about-content {
+    padding:0 2rem;
     display: flex;
     align-items: center;
     gap: 4rem;
@@ -1166,6 +1216,7 @@ body.dark-mode .theme-toggle:hover {
     }
     
     .about-content {
+        padding: 0 1rem;
         flex-direction: column;
     }
     
@@ -1202,6 +1253,11 @@ body.dark-mode .theme-toggle:hover {
         left: 0; 
         /* padding-left: 3rem; */
     }
+    
+    .price-tag {
+        text-align: center;
+        /* font-size: 2rem; */
+    }
 }
 
 @media (max-width: 768px) {
@@ -1210,7 +1266,7 @@ body.dark-mode .theme-toggle:hover {
     }
     
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .container {
@@ -1227,6 +1283,7 @@ body.dark-mode .theme-toggle:hover {
     }
     
     .price-tag {
+        text-align: center;
         font-size: 2rem;
     }
     
