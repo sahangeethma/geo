@@ -84,7 +84,7 @@ dots.forEach(dot => {
 setInterval(() => {
     currentTestimonial = (currentTestimonial + 1) % testimonials.length;
     showTestimonial(currentTestimonial);
-}, 5000);
+}, 7500);
 
 // Smooth scrolling for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
