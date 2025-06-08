@@ -59,6 +59,34 @@ themeToggle.addEventListener('click', () => {
 // Initialize particles on load
 window.addEventListener('load', createParticles);
 
+// Result slider
+const results = document.querySelectorAll('.result');
+const resdots = document.querySelectorAll('.nav-resdot');
+let currentresult = 0;
+
+function showResult(index) {
+    results.forEach(result => result.classList.remove('active'));
+    resdots.forEach(dot => dot.classList.remove('active'));
+    
+    results[index].classList.add('active');
+    resdots[index].classList.add('active');
+    currentresult = index;
+}
+
+resdots.forEach(dot => {
+    dot.addEventListener('click', () => {
+        const index = parseInt(dot.getAttribute('data-index'));
+        showResult(index);
+    });
+});
+
+// Auto-rotate result
+setInterval(() => {
+    currentresult = (currentresult + 1) % results.length;
+    showResult(currentresult);
+}, 7500);
+
+
 // Testimonial slider
 const testimonials = document.querySelectorAll('.testimonial');
 const dots = document.querySelectorAll('.nav-dot');
@@ -84,7 +112,7 @@ dots.forEach(dot => {
 setInterval(() => {
     currentTestimonial = (currentTestimonial + 1) % testimonials.length;
     showTestimonial(currentTestimonial);
-}, 7500);
+}, 30000);
 
 // Smooth scrolling for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

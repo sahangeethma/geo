@@ -772,15 +772,21 @@ body.dark-mode .course-content li {
     font-weight: bold;
 }
 
-.testimonials-container {
+.testimonials-container,
+.results-container {
     max-width: 800px;
     margin: 0 auto;
     position: relative;
-    overflow: hidden;
-    height: 400px;
+    overflow:hidden;
+    min-height: 300px;
 }
 
-.testimonial {
+.testimonials-container{
+    height: 470px;
+}
+
+.testimonial,
+.result{
     background: white;
     border-radius: 16px;
     padding: 2.5rem;
@@ -795,17 +801,20 @@ body.dark-mode .course-content li {
     transform: translateX(100%);
 }
 
-body.dark-mode .testimonial {
+body.dark-mode .testimonial,
+body.dark-mode .result {
     background: #1e1e1e;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-.testimonial.active {
+.testimonial.active,
+.result.active{
     opacity: 1;
     transform: translateX(0);
 }
 
-.testimonial .quote {
+.testimonial .quote,
+.result .quote{
     font-size: 1.5rem;
     font-style: italic;
     margin-bottom: 2rem;
@@ -813,8 +822,14 @@ body.dark-mode .testimonial {
     position: relative;
 }
 
+.testimonial .quote {
+    font-size: 1.2rem;
+}
+
 .testimonial .quote:before,
-.testimonial .quote:after {
+.testimonial .quote:after,
+.result .quote:before,
+.result .quote:after {
     content: '"';
     font-size: 4rem;
     position: absolute;
@@ -822,12 +837,14 @@ body.dark-mode .testimonial {
     opacity: 0.2;
 }
 
-.testimonial .quote:before {
+.testimonial .quote:before,
+.result .quote:before {
     top: -30px;
     left: -20px;
 }
 
-.testimonial .quote:after {
+.testimonial .quote:after,
+.result .quote:after {
     bottom: -70px;
     right: -20px;
 }
@@ -865,14 +882,16 @@ body.dark-mode .client-details p {
     color: #aaa;
 }
 
-.testimonial-nav {
+.testimonial-nav,
+.result-nav {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-top: 2rem;
 }
 
-.nav-dot {
+.nav-dot,
+.nav-resdot {
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -881,11 +900,13 @@ body.dark-mode .client-details p {
     transition: var(--transition);
 }
 
-body.dark-mode .nav-dot {
+body.dark-mode .nav-dot,
+.nav-resdot {
     background: #444;
 }
 
-.nav-dot.active {
+.nav-dot.active,
+.nav-resdot.active {
     background: var(--secondary);
     transform: scale(1.3);
 }
@@ -1323,6 +1344,13 @@ body.dark-mode .theme-toggle:hover {
         align-items: center;
         width: 240px;
         /* height: 140px; */
+    }
+
+    .testimonials-container{
+        height: 650px;
+    }
+    .results-container{
+        height: 350px;
     }
 
 }
