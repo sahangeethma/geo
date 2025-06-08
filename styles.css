@@ -1359,4 +1359,8 @@ body.dark-mode .theme-toggle:hover {
         padding: 1rem;
         margin: 0.5rem 0;
     }
+
+    .testimonials-container{
+        height: 850px;
+    }
 }
